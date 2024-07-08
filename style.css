@@ -1,0 +1,116 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+/* muda cor do fundo da Navbar*/
+.container-fluid {
+  background-color: #DBB5B5;
+}
+
+/* muda a cor e a posição do logo da Navbar */
+.navbar-brand {
+  color: #987070;
+}
+
+/* retira o espaço que havia entre a Navbar e o About Me*/
+.navbar {
+  --bs-navbar-padding-y: 0;
+}
+
+/* muda a cor dos links da Navbar - exceto Home */
+.nav-link {
+  color: #987070;
+}
+
+/* estilização do submenu "Social" da Navbar */
+.dropdown-menu {
+  background-color: #F1E5D1;
+  border-radius: .75rem;
+  box-shadow: 5px 5px;
+  border: 3px solid;
+  color: black;
+  position: absolute;
+  min-width: 50px;
+}
+
+/* muda a cor dos icons do submenu "Social" da Navbar */
+.dropdown-item {
+  color: #987070
+}
+
+/* muda a cor do background */
+.body {
+  background: linear-gradient(300deg, #F1E5D1, #DBB5B5, #C39898, #987070);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* muda a cor do botão "Learn More" */
+.btn {
+  background-color: #987070;
+  color: white;
+  box-shadow: 2px 2px;
+  border: 3px solid;
+  color: black;
+}
+
+/* muda a cor do texto "My Portfolio" */
+.text-center {
+  color:black;
+}
+
+/* muda a cor do background dos 3 cards */
+.card {
+  background-color: #F1E5D1;
+}
+
+/* coloca as fotos dentro dos cards com as respetivas dimensões */
+.card .img-fit {
+  aspect-ratio: 16 / 11;
+  object-fit: cover;
+}
+
+/* coloca as  dimensões corretas das imagens nos cards para responsive design em menores que medium (md) */
+@media (max-width: 767.98px) {
+  .card .img-fit {
+    aspect-ratio: 1.45 / 1;
+  }
+}
+
+/* coloca os cards todos do mesmo tamanho */
+.card {
+  height: 100%;
+}
+
+/* coloca os cards todos do mesmo tamanho */
+.card-body {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+/* empurra os buttons para baixo */
+.card-text {
+  flex-grow: 1;
+}
+
+/* coloca o texto no footer e na navbar a preto quando passamos por cima deles */
+.nav-link:hover {
+  color: black;
+}
